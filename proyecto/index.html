@@ -1,91 +1,227 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <title>Biblioteca Comunitaria</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilo.css">
+    <title>Encabezado responsive</title>
 </head>
 <body>
     <header>
-    <div class="container">
-        <p class="logo">Biblioteca Comunitaria</p>
-        <nav>
-            <a href="#Nuestros programas">Catalogo</a>
-            <a href="#Registro-de-usuario">Registro de usuario</a>
-            <a href="#Actividades">Actividades</a>
-            <a href="#Aplica-ya">Contacto</a>
+         <div class="logo">
+            <img src="biblio.png" alt="Logo de la compañia">
+            <h2 class="nombre-empresa"></h2>
+        </div>
+           
+               <a href="" class="nav-link">Catalogo</a>
+               <a href="" class="nav-link">Registro</a>
+               <a href="Actividades.html" class="nav-link">Actividades</a> 
+               <a href="" class="nav-link">Contacto</a>
         </nav>
+
+        <div class="buscador">
+          <input type="text" placeholder="Buscar libros, autores, temas...">
+           <button>🔍</button>
+        </div>
+
+        <div class="login-container">
+
+         <div class="login-icon">
+          👤
+
+         </div>
+
+          <div class="login-menu">
+          <a href="#">Iniciar sesión</a>
+          <a href="#">Registrarte</a>
+          
+         </div>
+
+
+        </div>
+
+    </header>
+    <section class="hero">
+
+    <div class="hero-contenido">
+
+        <h1>Descubre un mundo lleno de historias</h1>
+
+        <p>
+            Explora autores, libros y actividades literarias en una experiencia moderna e interactiva.
+        </p>
+
+        <div class="hero-botones">
+            <button class="btn-explorar">Explorar catálogo</button>
+        </div>
+
     </div>
-            </header>
-            <section id="hero">
-                <h1>Tu biblioteca, <br>tu mundo de conocimiento</h1>
-                <button >Explora ya!</button>
-            </section>
-            <section id="somos-proya">
-                <div class="container">
-                    <div class="ing-container"></div>
-                    <h2><span class="color-acento">Libros disponibles para la comunidad!</span></h2>
-                    <p>¡Haz click aquí para aplicar!</p>
-                </div>
 
-            </section>
-            <section id="Nuestros programas">
-                <div class="container">
-                    <h2>Nuestros programas</h2>
-                    <div class="programas">
-                <div class="carta">
-                    <h3>Catalogo XD</h3>
-                    <p>Busca y descubre libros, autores,tomas y mucho mas en <br> nuestro catalogo en linea. <br> Encuentra tu proximo libro favorito con nosotros!
-                        
-                        <br><button >+ info</button>
-                    </p>
-                </div>
-                </section>
-                <section id="Registro-de-usuario">
-                <div class="carta">
-                    <h3>Registro de usuario</h3>
-                    <p>Registrate para obtener tu tarjeta de biblioteca y acceder a nuestro catalogo completo. <br>
-                        Disfruta de beneficios exclusivos, como reservas anticipadas y eventos especiales para miembros.
-                        <br><button >+ info</button>
-                    </p>
-                </div>
-                </section>
-                <section id="Actividades">
-                    <div class="carta">
-                    <h3>Actividades</h3>
-                    <p> Actividades especiales para miembros de la biblioteca.<br> 
-                        Participa en clubes de lectura, talleres de escritura, eventos culturales y mucho mas. <br>
-                        Disponible para todas las edades y niveles de lectura. 
-                        <br><button >+ info</button>
-                    </p>
-                    </div>
-                </div>
-            </div>
-            </section>
-            
-            <section id="Caracteristicas">
-                <div class="container">
-                    
-                    <ul>
-                        <li>✅ 100% online</li>
-                        <li>✅ Flexibilidad de horarios</li>
-                        <li>✅Soporte uno a uno</li>
-                        <li>✅Asistencia financiera</li>
-                    </ul>
-                </div>
-                    
-            </section>
-            <section id="Aplica-ya">
-                <h2>Contacto</h2>
-                <h1>¿Tienes preguntas? ¡Contáctanos!</h1>
-                <button >+ info</button>
+</section>
+   <section class="escritores">
 
-            </section>
-            <footer>
-                <div class="container">
-                <p>&copy; 2024 Biblioteca Comunitaria</p>
-              </div>
-            </footer>
-                    
+    <h2>Escritores Peruanos</h2>
+
+    <div class="slider-autores">
+
+        <div class="autor-card">
+            <img src="mario_vargas_llosa.png" alt="Mario Vargas Llosa">
+            <h3>Mario Vargas Llosa</h3>
+        </div>
+
+        <div class="autor-card">
+            <img src="cesar_vallego.png" alt="César Vallejo">
+            <h3>César Vallejo</h3>
+        </div>
+        <div class="autor-card">
+            <img src="ricardo_palma.png" alt="Ricardo Palma">
+            <h3>Ricardo Palma</h3>
+        </div>
+
+        <div class="autor-card">
+            <img src="jose_maria_arguedas.png" alt="José María Arguedas">
+            <h3>José María Arguedas</h3>
+        </div>
+
+        <div class="autor-card">
+            <img src="Ciro_alegria.png" alt="Ciro Alegría">
+            <h3>Ciro Alegría</h3>
+        </div>
+
+    </div>
+
+</section>
+<section class="libros-populares">
+
+    <h2>Libros populares</h2>
+
+    <div class="slider-libros">
+
+        <div class="libro-card">
+            <img src="LosRiosProfundos.png" alt="Los Rios Profundos">
+            <h3>LosRiosProfundos</h3>
+        </div>
+
+        <div class="libro-card">
+            <img src="LosPerrosHambrientos.png" alt="Los Perros Hambrientos">
+            <h3>Los Perros Hambrientos</h3>
+        </div>
+
+        <div class="libro-card">
+            <img src="LaCiudadyLosPerros.png" alt="La Ciudad y LosPerros">
+            <h3>La ciudad y los perros </h3>
+        </div>
+         <div class="libro-card">
+            <img src="LosHeraldosNegros.png" alt="Los Heraldos Negros">
+            <h3>Los Heraldos Negros</h3>
+        </div>
+
+        <div class="libro-card">
+            <img src="TradicionesPeruanas.png" alt="Tradiciones Peruanas">
+            <h3>Tradiciones Peruanas</h3>
+        </div>
+
+    </div>
+
+</section>
+
+    <script src="./js/main.js"></script>
+    <section class="info-biblioteca">
+
+    <div class="contenido-info">
+
+        <h2>
+            BIBLIOTECA CONOCIMIENTO:
+            <br>
+            CULTURA, APRENDIZAJE E INNOVACIÓN DIGITAL
+        </h2>
+
+        <p>
+            En Biblioteca Conocimiento creemos que los libros tienen el poder
+            de transformar vidas. Nuestra plataforma conecta a lectores,
+            estudiantes y amantes de la literatura en una experiencia moderna,
+            interactiva y accesible para todos.
+        </p>
+
+        <p>
+            Explora autores clásicos y contemporáneos, descubre nuevas obras
+            y participa en actividades literarias diseñadas para fomentar la
+            creatividad, el pensamiento crítico y el amor por la lectura.
+        </p>
+
+        <p>
+            Nuestra biblioteca digital combina tecnología y educación para
+            ofrecer un espacio dinámico donde el conocimiento está al alcance
+            de cualquier persona, desde cualquier lugar.
+        </p>
+
+        <p>
+            Biblioteca Conocimiento no es solo una página web; es una comunidad
+            creada para inspirar, aprender y compartir historias que dejan huella.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="franja-biblioteca">
+
+    <div class="franja-texto">
+        <h2>ÚNETE A BIBLIOTECA CONOCIMIENTO</h2>
+        <p>
+            Descubre miles de historias, autores y actividades literarias 
+            en una experiencia moderna e interactiva.
+        </p>
+    </div>
+
+    <div class="franja-boton">
+        <a href="#">INICIAR SESIÓN O REGISTRARSE →</a>
+    </div>
+
+</section>
+    
+    
 </body>
+<footer class="footer">
 
+    <div class="footer-contenido">
+
+        <div class="footer-seccion">
+            <h3>Biblioteca</h3>
+            <a href="">Catálogo</a>
+            <a href="">Autores</a>
+            <a href="">Actividades</a>
+            <a href="">Contacto</a>
+        </div>
+
+        <div class="footer-seccion">
+            <h3>Información</h3>
+            <a href="">Nosotros</a>
+            <a href="">Política de privacidad</a>
+            <a href="">Términos</a>
+        </div>
+
+        <div class="footer-seccion">
+            <h3>Contacto</h3>
+            <p>Lima - Perú</p>
+            <p>biblioteca@gmail.com</p>
+            <p>+51 999 999 999</p>
+        </div>
+
+        <div class="footer-seccion">
+            <h3>Síguenos</h3>
+            <div class="redes">
+                <a href="">Facebook</a>
+                <a href="">Instagram</a>
+                <a href="">TikTok</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        © 2026 Biblioteca Conocimiento | Todos los derechos reservados
+    </div>
+
+</footer>
 </html>
