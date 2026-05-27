@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* HEADER */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 0;
+    height: 100px;
+}
+.logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #00152b; /* mismo tono del logo */
+    padding: 0 20px;
+    border-right: 1px solid rgba(255,255,255,0.08);
+}
+.logo img{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+.logo img:hover{
+    transform: scale(0.95);
+}
+.login-menu{
+
+    position: absolute;
+
+    top: 45px;
+
+    right: 0;
+
+    background: rgba(241, 241, 244, 0.604);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(238, 231, 231, 0.2);
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 32px rgba(252, 251, 251, 0.3);
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 200px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.4s;
+}
+
+.login-menu a{
+
+    color: rgb(91, 89, 89);
+
+    padding: 15px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.login-menu a:hover{
+
+    background: rgba(255,255,255,0.1);
+
+    border-radius: 10px;
+}
+/* MOSTRAR MENÚ */
+
+.login-container:hover .login-menu{
+
+    opacity: 1;
+
+    visibility: visible;
+}
+.login-container .login-icon{
+    font-size: 42px; /* agranda el ícono */
+    margin-left: 20px;
+    margin-right: 60px;
+    cursor: pointer;
+}
+.buscador{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.buscador input{
+
+    background: rgba(236, 238, 241, 0.512);
+
+    border: 1px solid rgba(38, 9, 9, 0.2);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 30px;
+
+    padding: 10px 20px;
+
+    color: black;
+
+    outline: none;
+}
+.buscador button{
+
+    border-radius: 50%;
+
+    border: none;
+
+    padding: 10px;
+
+    cursor: pointer;
+}
+.nav{
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* HERO */
+
+.hero-actividades{
+    text-align: center;
+    padding: 100px 10%;
+}
+
+.hero-actividades h1{
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+
+.hero-actividades p{
+    font-size: 22px;
+    max-width: 900px;
+    margin: auto;
+    line-height: 1.6;
+    color: #cfcfcf;
+}
+
+/* EVENTOS */
+
+.eventos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+    padding: 50px 8%;
+}
+
+.evento-card{
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    transition: 0.4s;
+}
+
+.evento-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+.evento-card img{
+    width: 100%;
+
+    height: 210px;
+
+    object-fit: cover;
+
+    transition: 0.8s;
+}
+.evento-card:hover{
+    transform: scale(1.1);
+}
+
+.evento-card h2{
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.evento-card p{
+    color: #d0d0d0;
+    line-height: 1.6;
+}
+
+/* TABLA */
+
+.tabla-eventos{
+    padding: 80px 8%;
+}
+
+.tabla-eventos h2{
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #111;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+th{
+    background: #4b7f68;
+    padding: 20px;
+    font-size: 20px;
+}
+
+td{
+    padding: 18px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+tr:hover{
+    background: rgba(255,255,255,0.08);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .nav{
+        gap: 15px;
+    }
+
+    .nav a{
+        font-size: 16px;
+    }
+
+    .hero-actividades h1{
+        font-size: 45px;
+    }
+
+    .hero-actividades p{
+        font-size: 18px;
+    }
+
+    table{
+        font-size: 14px;
+    }
+
+}
