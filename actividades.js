@@ -325,12 +325,5 @@ document.getElementById("formEvento").addEventListener("submit", function(e){
 
 });
 
-
-document.getElementById("btnNuevoEvento").addEventListener("click", function(){
-    alert("Evento seleccionado");
-    modalOpciones.style.display = "none";
-    modalEvento.style.display = "flex";
-});
-
 mostrarActividades();
 cargarHorario();

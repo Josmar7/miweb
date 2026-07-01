@@ -67,6 +67,7 @@ header{
 .contacto-hero{
     text-align:center;
     padding:80px 20px;
+    background-image: url(../Imagenes/Logo/PresentacionDeLibros.png);
 }
 
 .contacto-hero h1{
