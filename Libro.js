@@ -4,7 +4,7 @@ const idLibro = Number(parametros.get("id"));
 
 // Obtener libros nuevos
 const nuevosLibros =
-    JSON.parse(localStorage.getItem("nuevosLibros")) || [];
+    JSON.parse(localStorage.getItem("todosLibros")) || [];
 
 // Unir libros originales + nuevos
 const todosLosLibros = [...libros, ...nuevosLibros];
