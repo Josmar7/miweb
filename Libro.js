@@ -29,11 +29,11 @@ if(libro){
                 <div class="flip-card-inner">
 
                     <div class="flip-card-front">
-                        <img src="${libro.imagen}">
+                        <img src="./${libro.imagen}">
                     </div>
 
                     <div class="flip-card-back">
-                        <img src="${libro.autorImg}">
+                        <img src="./${libro.autorImg}">
                     </div>
 
                 </div>
