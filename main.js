@@ -80,52 +80,70 @@ if (contenedorLibros && typeof libros !== "undefined") {
 
 }
 
+function obtenerRutaImagen(ruta){
+
+    if(!ruta) return "";
+
+    if(
+        ruta.startsWith("data:") ||
+        ruta.startsWith("http://") ||
+        ruta.startsWith("https://") ||
+        ruta.startsWith("blob:")
+    ){
+        return ruta;
+    }
+
+    return `./${ruta}`;
+
+}
+
 function mostrarLibros(lista){
-contenedorLibros.innerHTML = "";
 
-let html = "";
+    contenedorLibros.innerHTML = "";
 
+    let html = "";
 
-lista.forEach(libro => {
+    lista.forEach(libro => {
 
-    const usuario =
-        JSON.parse(localStorage.getItem("usuarioActivo"));
+        const usuario =
+            JSON.parse(localStorage.getItem("usuarioActivo"));
 
-    const esAdmin =
-    usuario &&
-    (String(usuario.rol || "")).toLowerCase() === "admin";
+        const esAdmin =
+            usuario &&
+            (String(usuario.rol || "")).toLowerCase() === "admin";
 
+        const imagenLibro = obtenerRutaImagen(libro.imagen);
 
-    html += `
-        <div class="card-libro">
+        html += `
+            <div class="card-libro">
 
-            <a href="Libro.html?id=${libro.id}">
+                <a href="Libro.html?id=${libro.id}">
 
-                <img src="${libro.imagen}" alt="${libro.titulo}">
+                    <img src="${imagenLibro}" alt="${libro.titulo}">
 
-                <h3>${libro.titulo}</h3>
+                    <h3>${libro.titulo}</h3>
 
-                <p class="autor">${libro.autor}</p>
+                    <p class="autor">${libro.autor}</p>
 
-            </a>
+                </a>
 
-            ${
-             esAdmin
-              ? `<button class="btnEliminar"
-             onclick="eliminarLibro(${libro.id})">
-             🗑 Eliminar
-             </button>`
-              : ""
-             }
+                ${
+                    esAdmin
+                    ? `<button class="btnEliminar"
+                        onclick="eliminarLibro(${libro.id})">
+                        🗑 Eliminar
+                    </button>`
+                    : ""
+                }
 
-        </div>
-    `;
+            </div>
+        `;
 
-});
+    });
 
-contenedorLibros.innerHTML = html;
-    
-};
+    contenedorLibros.innerHTML = html;
+
+}
 
 function actualizarContadores(){
 
