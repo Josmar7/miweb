@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividades | Biblioteca Conocimiento</title>
-    <link rel="stylesheet" href="Actividades.css">
+    <link rel="stylesheet" href="PCss/Actividades.css">
 </head>
 
 <body>
@@ -12,39 +12,132 @@
 <header>
 
     <div class="logo">
-        <img src="biblio.png" alt="Biblioteca Conocimiento">
+        <img src="Imagenes/Logo/biblio.png" alt="Biblioteca Conocimiento">
     </div>
 
-    <nav class="nav">
+    <button class="menu-toggle" id="menu-toggle">
+        ☰
+    </button>
+
+    <nav class="nav" id="nav-menu">
         <a href="index.html">Inicio</a>
-        <a href="#">Catálogo</a>
-        <a href="#">Registro</a>
-        <a href="#">Contacto</a>
+        <a href="/Catalago.html">Catálogo</a>
+        <a href="/Contacto.html">Contacto</a>
     </nav>
-    <div class="buscador">
-          <input type="text" placeholder="Buscar libros, autores, temas...">
-           <button>🔍</button>
+
+    <div class="login-container">
+
+        <div class="login-icon">
+            👤
         </div>
 
-        <div class="login-container">
+       <div id="loginMenu" class="login-menu">
 
-         <div class="login-icon">
-          👤
+       <a href="login.html">Iniciar sesión</a>
+       <a href="registro.html">Registrarte</a>
 
-         </div>
+</div>
 
-          <div class="login-menu">
-          <a href="#">Iniciar sesión</a>
-          <a href="#">Registrarte</a>
-          
-         </div>
-
-
-        </div>
+    </div>
 
 </header>
 
-<!-- HERO -->
+<section id="panelAdmin" class="panel-admin" style="display:none;">
+
+    <div class="admin-panel">
+
+    <div class="admin-header">
+
+        <div class="admin-icono">📅</div>
+
+        <div class="admin-info">
+            <h2>Panel de Actividades</h2>
+            <p>Administrador</p>
+        </div>
+
+    </div>
+
+    <div class="admin-botones">
+
+        <button id="btnAgregar">➕ Agregar</button>
+
+    </div>
+
+</div>
+
+</section>
+<div id="modalOpciones" class="modal-opciones">
+    <div class="opciones-box">
+
+        <span id="cerrarOpciones">✖</span>
+
+        <h2>¿Qué deseas agregar?</h2>
+
+        <button id="btnNuevaActividad">📚 Actividad</button>
+        <button id="btnNuevoEvento">🗓 Evento</button>
+
+    </div>
+</div>
+
+<div id="modalActividad" class="modal">
+    <div class="modal-box">
+        <span id="cerrarActividad">✖</span>
+
+        <h2>📚 Agregar Actividad</h2>
+
+        <form id="formActividad">
+            <input type="text" id="nombreActividad" placeholder="Nombre de actividad">
+            <textarea id="descripcionActividad" placeholder="Descripción"></textarea>
+            <input type="file" id="imagenActividad">
+            <img id="previewActividad" style="display:none;">
+            <button type="submit">Guardar Actividad</button>
+        </form>
+    </div>
+</div>
+
+<div id="modalEvento" class="modal">
+    <div class="modal-box">
+        <span id="cerrarEvento">✖</span>
+
+        <h2>🗓 Agregar Evento</h2>
+
+        <form id="formEvento">
+            <select id="diaEvento">
+                <option>Lunes</option>
+                <option>Martes</option>
+                <option>Miércoles</option>
+                <option>Jueves</option>
+                <option>Viernes</option>
+                <option>Sábado</option>
+                <option>Domingo</option>
+            </select>
+
+            <input type="text" id="fechaEvento" placeholder="01/07">
+
+            <select id="actividadEvento"></select>
+
+            <select id="horaEvento">
+                <option>8:00 AM</option>
+                <option>9:00 AM</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>4:00 PM</option>
+                <option>5:00 PM</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+                <option>8:00 PM</option>
+                <option>9:00 PM</option>
+            </select>
+
+            <select id="lugarEvento"></select>
+            <button type="submit">Guardar Evento</button>
+        </form>
+    </div>
+</div>
 <section class="hero-actividades">
 
     <h1>Actividades Literarias</h1>
@@ -55,87 +148,34 @@
     </p>
 
 </section>
-
-<!-- EVENTOS -->
-<section class="eventos">
-
-    <div class="evento-card">
-        <h2>Club de Lectura</h2>
-
-        <p>
-            Un espacio donde los lectores comparten opiniones y análisis
-            sobre obras literarias clásicas y contemporáneas.
-        </p>
-        <img src="ClubDeLectura.png">
-    </div>
-
-    <div class="evento-card">
-        <h2>Taller de Escritura</h2>
-
-        <p>
-            Aprende técnicas narrativas y desarrolla tu creatividad
-            mediante ejercicios prácticos de escritura.
-        </p>
-        <img src="TallerDeEscritura.png">
-    </div>
-
-    <div class="evento-card">
-        <h2>Presentación de Libros</h2>
-
-        <p>
-            Conoce nuevos autores y participa en presentaciones
-            exclusivas de libros nacionales e internacionales.
-        </p>
-        <img src="PresentacionDeLibros.png">
-    </div>
-
+<section id="contenedor-actividades" class="eventos">
 </section>
 
-<!-- TABLA -->
+
+
 <section class="tabla-eventos">
 
     <h2>Horario de Eventos</h2>
 
-    <table>
+  <table id="tablaEventos">
 
-        <tr>
-            <th>Día</th>
-            <th>Evento</th>
-            <th>Hora</th>
-            <th>Lugar</th>
-        </tr>
+    <tr>
+        <th>Día</th>
+        <th>Fecha</th>
+        <th>Evento</th>
+        <th>Hora</th>
+        <th>Lugar</th>
+        <th id="colAccion" style="display:none;">Acción</th>
+    </tr>
 
-        <tr>
-            <td>Lunes</td>
-            <td>Club de Lectura</td>
-            <td>4:00 PM</td>
-            <td>Sala Principal</td>
-        </tr>
-
-        <tr>
-            <td>Miércoles</td>
-            <td>Taller de Escritura</td>
-            <td>5:30 PM</td>
-            <td>Aula Virtual</td>
-        </tr>
-
-        <tr>
-            <td>Viernes</td>
-            <td>Presentación de Libros</td>
-            <td>6:00 PM</td>
-            <td>Auditorio</td>
-        </tr>
-
-        <tr>
-            <td>Sábado</td>
-            <td>Cuenta Cuentos</td>
-            <td>11:00 AM</td>
-            <td>Zona Infantil</td>
-        </tr>
-
-    </table>
+</table>
 
 </section>
 
+<script src="/actividades.js"></script>
+<script src="main.js"></script>
+
+
 </body>
+
 </html>

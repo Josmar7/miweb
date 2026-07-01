@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+
+    <link rel="stylesheet" href="PCss/Catalogo.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <a href="index.html" class="volver"> ← Regresar </a>
+
+        <h1 id="titulo-categoria">
+            Catálogo : Todos los libros
+        </h1>
+    </header>
+<section id="panelAdmin" class="panel-admin" style="display:none;">
+
+    <div class="admin-info">
+        <div class="admin-icon">👨‍💼</div>
+
+        <div class="admin-texto">
+            <h2>Panel de Administrador</h2>
+            <p id="nombreAdmin">Administrador</p>
+        </div>
+    </div>
+        <div class="admin-botones">
+        <button id="btnAgregarLibro">
+            ➕ Agregar Libro
+        </button>
+
+        <button onclick="buscarLibroPrompt()">
+            🔍 Buscar libro
+        </button>
+    </div>
+</section>
+
+
+     
+
+    <main class="contenedor">
+
+        <aside class="categorias">
+
+            <button class="categoria activa" data-categoria="Todos">
+                Todos
+            </button>
+
+            <button class="categoria" data-categoria="Literatura">
+                Literatura
+            </button>
+
+            <button class="categoria" data-categoria="Poesía">
+                Poesía
+            </button>
+
+            <button class="categoria" data-categoria="Historia">
+                Historia
+            </button>
+
+            <button class="categoria" data-categoria="Matemática">
+                Matemática
+            </button>
+
+            <button class="categoria" data-categoria="Física">
+                Física
+            </button>
+
+            <button class="categoria" data-categoria="Química">
+                Química
+            </button>
+
+            <button class="categoria" data-categoria="Inglés">
+                Inglés
+            </button>
+
+            <button class="categoria" data-categoria="Tecnología">
+                Tecnología
+            </button>
+
+            <button class="categoria" data-categoria="Educación">
+                Educación
+            </button>
+
+        </aside>
+
+        <section id="contenedor-libros" class="grid-libros">
+             <h1>PRUEBA DE LIBROS</h1>
+
+        </section>
+
+    </main>
+    <div id="modalLibro" class="modal">
+
+    <div class="modal-contenido">
+
+        <span class="cerrarModal">&times;</span>
+
+        <h2>📚 Agregar Libro</h2>
+
+        <form id="formLibro">
+
+    <input type="text"
+           placeholder="Título"
+           id="tituloLibro"
+           required>
+
+    <input type="text"
+           placeholder="Autor"
+           id="autorLibro"
+           required>
+
+    <select id="categoriaLibro">
+
+        <option>Literatura</option>
+        <option>Poesía</option>
+        <option>Historia</option>
+        <option>Matemática</option>
+        <option>Física</option>
+        <option>Química</option>
+        <option>Inglés</option>
+        <option>Tecnología</option>
+        <option>Educación</option>
+
+    </select>
+
+    <input type="text"
+           placeholder="Editorial"
+           id="editorialLibro">
+
+    <input type="number"
+           placeholder="Año"
+           id="anioLibro">
+
+    <!-- Imagen del libro -->
+
+    <label>📚 Portada del libro</label>
+
+    <input
+        type="file"
+        id="imagenLibro"
+        accept="image/*">
+
+    <img
+        id="previewLibro"
+        style="display:none;
+               width:140px;
+               border-radius:10px;">
+
+    <!-- Imagen del autor -->
+
+    <label>👤 Foto del autor</label>
+
+    <input
+        type="file"
+        id="autorImagen"
+        accept="image/*">
+
+    <img
+        id="previewAutor"
+        style="display:none;
+               width:120px;
+               border-radius:50%;">
+
+    <textarea
+        id="descripcionLibro"
+        placeholder="Descripción">
+    </textarea>
+
+    <button type="submit">
+        Guardar Libro
+    </button>
+
+</form>
+        
+
+    </div>
+
+</div>
+
+    
+
+    <script src="/Libros.js"></script>
+    <script src="main.js"></script>
+    <script src="/admin.js"></script>
+
+</body>
+
+</html>
+

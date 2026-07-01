@@ -3,42 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stilo.css">
+    <link rel="stylesheet" href="PCss/stilo.css">
     <title>Encabezado responsive</title>
 </head>
 <body>
     <header>
          <div class="logo">
-            <img src="biblio.png" alt="Logo de la compañia">
-            <h2 class="nombre-empresa"></h2>
+        <img src="Imagenes/Logo/biblio.png" alt="Logo de la compañia">
+        <h2 class="nombre-empresa"></h2>
+    </div>
+
+    <button class="menu-toggle" id="menu-toggle">
+        ☰
+    </button>
+
+    <nav class="nav" id="nav-menu">
+        <a href="Catalago.html" class="nav-link">Catalogo</a>
+        <a href="" class="nav-link">Registro</a>
+        <a href="Actividades.html" class="nav-link">Actividades</a>
+        <a href="Contacto.html"class = "nav-link">Contacto</a>
+    </nav>
+        
+    </div>
+
+    <div class="login-container">
+
+        <div class="login-icon">
+            👤
         </div>
-           
-               <a href="" class="nav-link">Catalogo</a>
-               <a href="" class="nav-link">Registro</a>
-               <a href="Actividades.html" class="nav-link">Actividades</a> 
-               <a href="" class="nav-link">Contacto</a>
-        </nav>
 
-        <div class="buscador">
-          <input type="text" placeholder="Buscar libros, autores, temas...">
-           <button>🔍</button>
+        <div class="login-menu" id="loginMenu">
+          <a href="/login.html">Iniciar sesión</a>
+          <a href="/login.html">Registrarte</a>
         </div>
 
-        <div class="login-container">
-
-         <div class="login-icon">
-          👤
-
-         </div>
-
-          <div class="login-menu">
-          <a href="#">Iniciar sesión</a>
-          <a href="#">Registrarte</a>
-          
-         </div>
-
-
-        </div>
+    </div>
 
     </header>
     <section class="hero">
@@ -65,26 +64,26 @@
     <div class="slider-autores">
 
         <div class="autor-card">
-            <img src="mario_vargas_llosa.png" alt="Mario Vargas Llosa">
+            <img src="Imagenes/Autores/mario_vargas_llosa.png" alt="Mario Vargas Llosa">
             <h3>Mario Vargas Llosa</h3>
         </div>
 
         <div class="autor-card">
-            <img src="cesar_vallego.png" alt="César Vallejo">
+            <img src="Imagenes/Autores/CesarVallejo.png" alt="César Vallejo">
             <h3>César Vallejo</h3>
         </div>
         <div class="autor-card">
-            <img src="ricardo_palma.png" alt="Ricardo Palma">
+            <img src="Imagenes/Autores/RicardoPalma.png" alt="Ricardo Palma">
             <h3>Ricardo Palma</h3>
         </div>
 
         <div class="autor-card">
-            <img src="jose_maria_arguedas.png" alt="José María Arguedas">
+            <img src="Imagenes/Autores/jose_maria_arguedas.png" alt="José María Arguedas">
             <h3>José María Arguedas</h3>
         </div>
 
         <div class="autor-card">
-            <img src="Ciro_alegria.png" alt="Ciro Alegría">
+            <img src="Imagenes/Autores/Ciro_alegria.png" alt="Ciro Alegría">
             <h3>Ciro Alegría</h3>
         </div>
 
@@ -98,26 +97,26 @@
     <div class="slider-libros">
 
         <div class="libro-card">
-            <img src="LosRiosProfundos.png" alt="Los Rios Profundos">
+            <img src="Imagenes/Libros/LosRiosProfundos.png" alt="Los Rios Profundos">
             <h3>LosRiosProfundos</h3>
         </div>
 
         <div class="libro-card">
-            <img src="LosPerrosHambrientos.png" alt="Los Perros Hambrientos">
+            <img src="Imagenes/Libros/LosPerrosHambrientos.png" alt="Los Perros Hambrientos">
             <h3>Los Perros Hambrientos</h3>
         </div>
 
         <div class="libro-card">
-            <img src="LaCiudadyLosPerros.png" alt="La Ciudad y LosPerros">
+            <img src="Imagenes/Libros/LaCiudadyLosPerros.png" alt="La Ciudad y LosPerros">
             <h3>La ciudad y los perros </h3>
         </div>
          <div class="libro-card">
-            <img src="LosHeraldosNegros.png" alt="Los Heraldos Negros">
+            <img src="Imagenes/Libros/LosHeraldosNegros.png" alt="Los Heraldos Negros">
             <h3>Los Heraldos Negros</h3>
         </div>
 
         <div class="libro-card">
-            <img src="TradicionesPeruanas.png" alt="Tradiciones Peruanas">
+            <img src="Imagenes/Libros/TradicionesPeruanas.png" alt="Tradiciones Peruanas">
             <h3>Tradiciones Peruanas</h3>
         </div>
 
@@ -125,7 +124,7 @@
 
 </section>
 
-    <script src="./js/main.js"></script>
+    <script src="main.js"></script>
     <section class="info-biblioteca">
 
     <div class="contenido-info">
@@ -175,13 +174,12 @@
     </div>
 
     <div class="franja-boton">
-        <a href="#">INICIAR SESIÓN O REGISTRARSE →</a>
+        <a href="login.html">INICIAR SESIÓN O REGISTRARSE →</a>
     </div>
 
 </section>
     
-    
-</body>
+
 <footer class="footer">
 
     <div class="footer-contenido">
@@ -224,4 +222,5 @@
     </div>
 
 </footer>
+</body>
 </html>

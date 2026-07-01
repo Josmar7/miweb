@@ -5,14 +5,156 @@
 }
 body{
 
-    background: black;
+    background: rgb(10, 10, 11);
 
     font-family: sans-serif;
 
     overflow-x: hidden;
 }
 
-/* HEADER */
+header{
+    display:flex;
+    align-items:stretch; /* importante */
+    justify-content:space-between;
+    height:110px;
+    background:#e9e9e9;
+}
+
+/* LOGO */
+.logo{
+    background:#00152b;
+    height:100%;
+    min-height:110px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 25px;
+}
+
+.logo img{
+    height:100%;
+    width:auto;
+    object-fit:contain;
+}
+
+.logo img{
+    height:100%;
+    width:auto;
+}
+
+/* BUSCADOR */
+.buscador{
+    flex:1;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    max-width:450px;
+}
+
+.buscador input{
+    width:100%;
+    padding:12px 20px;
+    border-radius:30px;
+    border:1px solid #ccc;
+}
+
+.buscador button{
+    border:none;
+    border-radius:50%;
+    padding:10px;
+    cursor:pointer;
+}
+
+/* MENU */
+.nav{
+    display:flex;
+    gap:50px;
+    margin-left:60px;
+}
+
+.nav-link{
+    text-decoration:none;
+    color:black;
+    font-weight:bold;
+}
+
+/* LOGIN */
+.login-container{
+    display:flex;
+    align-items:center;
+}
+
+.login-icon{
+    font-size:35px;
+    cursor:pointer;
+}
+
+/* HAMBURGUESA */
+.menu-toggle{
+    display:none;
+}
+
+@media(max-width:768px){
+
+    header{
+        flex-wrap:nowrap;
+        padding:10px;
+        height:auto;
+        gap:10px;
+    }
+
+    .logo{
+        width:140px;
+        height:70px;
+    }
+
+    .logo img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+    }
+
+    .buscador{
+        flex:1;
+        max-width:none;
+    }
+
+    .buscador input{
+        width:100%;
+        font-size:14px;
+        padding:10px 15px;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:32px;
+        border:none;
+        background:none;
+        cursor:pointer;
+    }
+
+    .nav{
+        display:none;
+        position:absolute;
+        top:80px;
+        right:10px;
+        background:white;
+        flex-direction:column;
+        padding:20px;
+        border-radius:10px;
+        z-index:999;
+    }
+
+    .nav.active{
+        display:flex;
+    }
+
+    .login-icon{
+        font-size:30px;
+    }
+}
+
+
 header{
     display: flex;
     justify-content: space-between;
@@ -20,20 +162,14 @@ header{
     background-color: #e9e9e9;
     height: 110px;
     padding: 0;
+    flex-wrap: wrap;
     border-bottom: 1px solid rgba(255,255,255,0.1);
     box-shadow: 0 2px 20px rgba(0,0,0,0.15);
 }
 
-/* CONTENEDOR LOGO */
-.logo{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    background-color: #00152b; /* mismo tono del logo */
-    padding: 0 20px;
-    border-right: 1px solid rgba(255,255,255,0.08);
-}
-/* IMAGEN */
+
+
+
 .logo img{
     height: 100%;
     width: auto;
@@ -50,7 +186,7 @@ header{
 
     gap: 25px;
 
-    flex-wrap: wrap;
+    flex-wrap: cente;
 }
 
 .nav-link{
@@ -95,7 +231,6 @@ header{
     cursor: pointer;
 }
 
-/* SECCIÓN ESCRITORES */
 
 .escritores{
 
@@ -161,7 +296,6 @@ header{
     box-shadow: 0 12px 35px rgba(255,255,255,0.15);
 }
 
-/* IMÁGENES */
 
 .autor-card img{
 
@@ -189,7 +323,7 @@ header{
     font-size: 24px;
 }
 
-/* RESPONSIVE */
+
 
 @media(max-width:768px){
 
@@ -207,7 +341,7 @@ header{
     color: black;
 }
 
-/* MENÚ OCULTO */
+
 
 .login-menu{
 
@@ -259,7 +393,7 @@ header{
 
     border-radius: 10px;
 }
-/* MOSTRAR MENÚ */
+
 
 .login-container:hover .login-menu{
 
@@ -268,7 +402,7 @@ header{
     visibility: visible;
 }
 .login-container .login-icon{
-    font-size: 42px; /* agranda el ícono */
+    font-size: 42px; 
     margin-left: 20px;
     margin-right: 60px;
     cursor: pointer;
@@ -279,7 +413,7 @@ header{
 
     background:
     linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
-    url('biblioteca.png');
+    url('../Imagenes/Logo/biblioteca.png');
 
     background-size: cover;
 
@@ -366,8 +500,6 @@ header{
 }
 
 
-/* ANIMACIÓN */
-
 @keyframes aparecer{
 
     from{
@@ -422,7 +554,7 @@ header{
     padding-bottom: 20px;
 }
 
-/* SCROLL PERSONALIZADO */
+
 
 .slider-libros::-webkit-scrollbar{
     height: 10px;
@@ -434,7 +566,6 @@ header{
     border-radius: 20px;
 }
 
-/* TARJETAS */
 
 .libro-card{
 
@@ -461,7 +592,6 @@ header{
     box-shadow: 0 10px 30px rgba(255,255,255,0.15);
 }
 
-/* IMAGEN */
 
 .libro-card img{
 
@@ -482,7 +612,6 @@ header{
     font-size: 20px;
 }
 
-/* RESPONSIVE */
 
 @media(max-width:768px){
 
@@ -637,4 +766,72 @@ header{
     padding-top: 20px;
     text-align: center;
     color: #888;
+}
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+
+@media (max-width:768px){
+
+    header{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px;
+        height:auto;
+        flex-wrap:wrap;
+    }
+
+    .logo{
+        flex:1;
+        padding:0 10px;
+    }
+
+    .logo img{
+        width:180px;
+        height:auto;
+    }
+
+    .menu-toggle{
+        display:block;
+        font-size:32px;
+        border:none;
+        background:none;
+        cursor:pointer;
+    }
+
+    .nav{
+        display:none;
+        width:100%;
+        flex-direction:column;
+        background:#fff;
+        padding:20px;
+        gap:20px;
+        text-align:center;
+    }
+
+    .nav.active{
+        display:flex;
+    }
+
+    .buscador{
+        width:100%;
+        order:4;
+        margin-top:10px;
+        justify-content:center;
+    }
+
+    .buscador input{
+        width:90%;
+    }
+
+    .login-container{
+        margin-left:auto;
+    }
 }

@@ -1,0 +1,551 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:black;
+    color:white;
+    font-family:Arial, sans-serif;
+}
+
+.encabezado{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: black;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.volver{
+    position: absolute;
+    left: 20px;
+
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+.volver:hover{
+    color:#00bfff;
+}
+
+.contenedor{
+    display: flex;
+    align-items: flex-start;
+}
+
+.categorias{
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 20px;
+
+    background: #111;
+
+    position: sticky;
+    top: 80px;
+
+    height: calc(100vh - 80px);
+
+    overflow-y: auto;
+}
+
+.categoria{
+    border:none;
+    padding:12px;
+    cursor:pointer;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.categoria.activa{
+    background:#4facfe;
+    color:white;
+}
+
+.grid-libros{
+    flex:1;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(220px,1fr));
+    gap:30px;
+    padding:30px;
+}
+
+.card-libro{
+    background:#181818;
+
+    border-radius:15px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:520px;
+
+}
+.card-libro a{
+
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+.card-libro h3,
+.card-libro .autor{
+
+   text-align:center;
+
+    color:white;
+
+    padding:10px 15px;
+
+    font-size:16px;
+
+}
+
+.card-libro:hover{
+    transform:translateY(-8px);
+}
+
+.card-libro img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    display:block;
+}
+
+.card-libro h3{
+    padding:15px;
+    text-align:center;
+}
+
+@media(max-width:900px){
+
+    .contenedor{
+        flex-direction:column;
+    }
+
+    .categorias{
+        width:100%;
+        flex-direction:row;
+        overflow-x:auto;
+    }
+
+}
+@media (max-width: 992px){
+
+    .categorias{
+        width: 180px;
+    }
+
+    .grid-libros{
+        grid-template-columns:
+        repeat(auto-fill,minmax(180px,1fr));
+    }
+
+}
+@media (max-width: 768px){
+
+    .contenedor{
+        flex-direction: column;
+    }
+
+    .categorias{
+
+        position: static;
+
+        width: 100%;
+        height: auto;
+
+        flex-direction: row;
+
+        overflow-x: auto;
+
+        overflow-y: hidden;
+
+        white-space: nowrap;
+    }
+
+    .categoria{
+        min-width: 140px;
+    }
+
+    .grid-libros{
+
+        width: 100%;
+
+        grid-template-columns:
+        repeat(auto-fill,minmax(150px,1fr));
+
+        padding: 15px;
+    }
+
+}
+@media (max-width: 768px){
+
+    .encabezado{
+
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding-top: 20px;
+    }
+
+    .volver{
+
+        position: static;
+
+        align-self: flex-start;
+    }
+
+}
+.panel-admin{
+
+    background: linear-gradient(135deg, #1e293b, #334155);
+
+    border: 2px solid #38bdf8;
+
+    padding: 20px;
+
+    margin: 20px;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    align-items: center;
+
+}
+.admin-info{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.admin-icon{
+    font-size: 40px;
+}
+
+.admin-texto h2{
+    color: white;
+    margin: 0;
+    font-size: 28px;
+}
+
+.admin-texto p{
+    color: #38bdf8;
+    margin : 5px  0 0 0 ;
+    font-size: 18px;
+    font-weight: bold;
+}
+.admin-botones{
+
+    margin: 20px;
+}
+
+.admin-botones button{
+
+    background: #0ea5e9;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+.panel-admin h2{
+
+    color:white;
+
+    margin:0;
+
+    font-size:22px;
+
+}
+
+#btnAgregarLibro{
+
+    background:#1e88e5;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 18px;
+
+    cursor:pointer;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+}
+
+#btnAgregarLibro:hover{
+
+    background:#1565c0;
+
+}
+
+.admin-botones{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin: 20px;
+
+    padding: 0 20px;
+
+}
+
+.admin-botones button{
+
+    background: #0ea5e9;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    transition: .3s;
+
+}
+
+.admin-botones button:hover{
+
+    background: #0284c7;
+
+    transform: scale(1.05);
+
+}
+/* ===========================
+   MODAL ADMINISTRADOR
+=========================== */
+
+.modal{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.65);
+
+    z-index:9999;
+
+    justify-content:center;
+    align-items:center;
+
+}
+
+.modal-contenido{
+
+    background:white;
+
+    width:90%;
+    max-width:600px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    position:relative;
+
+    animation:aparecer .3s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        transform:scale(.8);
+
+        opacity:0;
+
+    }
+
+    to{
+
+        transform:scale(1);
+
+        opacity:1;
+
+    }
+
+}
+
+.cerrarModal{
+
+    position:sticky;
+
+    top:0;
+
+    float:right;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+    color:#666;
+
+    background:white;
+
+    z-index:10;
+
+}
+
+.cerrarModal:hover{
+
+    color:red;
+
+}
+
+.modal h2{
+
+    color:#1565c0;
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+}
+
+#formLibro{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+#formLibro input,
+#formLibro select,
+#formLibro textarea{
+
+    padding:12px;
+
+    border:1px solid #ccc;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+}
+
+#formLibro textarea{
+
+    resize:none;
+
+    height:120px;
+
+}
+
+#formLibro button{
+
+    background:#1565c0;
+
+    color:white;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:8px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#formLibro button:hover{
+
+    background:#0d47a1;
+
+}
+
+.btnEliminar{
+
+    width:100%;
+
+    border:none;
+
+    padding:15px;
+
+    background:#c62828;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+    font-weight:bold;
+
+    border-radius:0 0 15px 15px;
+
+     margin-top:auto;
+
+}
+
+.btnEliminar:hover{
+
+    background:#8e0000;
+
+}
+
