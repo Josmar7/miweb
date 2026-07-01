@@ -93,8 +93,12 @@ function obtenerRutaImagen(ruta){
         return ruta;
     }
 
-    return `./${ruta}`;
+    // Si empieza con "/", quitarlo
+    if(ruta.startsWith("/")){
+        ruta = ruta.substring(1);
+    }
 
+    return "./" + ruta;
 }
 
 function mostrarLibros(lista){

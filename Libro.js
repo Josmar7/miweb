@@ -18,18 +18,24 @@ const detalle = document.querySelector("#detalle-libro");
 
 // Detecta si la imagen es Base64, URL o ruta local
 function obtenerRutaImagen(ruta) {
-    if (!ruta) return "";
 
-    if (
+    if(!ruta) return "";
+
+    if(
         ruta.startsWith("data:") ||
         ruta.startsWith("http://") ||
         ruta.startsWith("https://") ||
         ruta.startsWith("blob:")
-    ) {
+    ){
         return ruta;
     }
 
-    return `./${ruta}`;
+    // Si empieza con "/", quitarlo
+    if(ruta.startsWith("/")){
+        ruta = ruta.substring(1);
+    }
+
+    return "./" + ruta;
 }
 
 if (libro) {
