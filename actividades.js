@@ -3,19 +3,19 @@ const actividades = [
         id:1,
         nombre:"Club de Lectura",
         descripcion:"Espacio para compartir lecturas.",
-        imagen:"/Imagenes/Logo/ClubDeLectura.png"
+        imagen:"./Imagenes/Logo/ClubDeLectura.png"
     },
     {
         id:2,
         nombre:"Taller de Escritura",
         descripcion:"Aprende técnicas narrativas.",
-        imagen:"/Imagenes/Logo/TallerDeEscritura.png"
+        imagen:"./Imagenes/Logo/TallerDeEscritura.png"
     },
     {
         id:3,
         nombre:"Presentación de Libros",
         descripcion:"Nuevos autores y obras.",
-        imagen:"/Imagenes/Logo/PresentacionDeLibros.png"
+        imagen:"./Imagenes/Logo/PresentacionDeLibros.png"
     }
 ];
 
